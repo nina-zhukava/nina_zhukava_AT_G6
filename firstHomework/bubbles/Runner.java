@@ -24,7 +24,7 @@ public class Runner {
     }
 
     private static Bubble[] pumpBottleWithSparklingWater(double vol, SparklingWater water){
-        int bubblesQuantity = (int) vol * SparklingWater.bubblesPerLitr;
+        int bubblesQuantity = (int) (vol * SparklingWater.bubblesPerLitr);
         Bubble[] bubbles = new Bubble[bubblesQuantity];
         water.pump(bubbles);
         return bubbles;
