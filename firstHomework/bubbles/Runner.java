@@ -2,18 +2,32 @@ package firstHomework.bubbles;
 
 public class Runner {
 
+    private static double SMALL_BOTTLE_VOLUME = 0.5;
+    private static double MEDIUM_BOTTLE_VOLUME = 1;
+    private static double BIG_BOTTLE_VOLUME = 1.5;
+
     public static void main(String[] args) {
 
         SparklingWater sparklingWater = new SparklingWater();
 
-        Bottle bottleSmall = new Bottle(0.5, sparklingWater);
-        Bottle bottleMedium = new Bottle(1, sparklingWater);
-        Bottle bottleBig = new Bottle(1.5, sparklingWater);
+        Bubble[] bubblesSmallBottleArray = pumpBottleWithSparklingWater(SMALL_BOTTLE_VOLUME, sparklingWater);
+        Bubble[] bubblesMediumBottleArray = pumpBottleWithSparklingWater(MEDIUM_BOTTLE_VOLUME, sparklingWater);
+        Bubble[] bubblesBigBottleArray = pumpBottleWithSparklingWater(BIG_BOTTLE_VOLUME, sparklingWater);
 
+        Bottle bottleSmall = new Bottle(SMALL_BOTTLE_VOLUME, sparklingWater);
+        Bottle bottleMedium = new Bottle(MEDIUM_BOTTLE_VOLUME, sparklingWater);
+        Bottle bottleBig = new Bottle(BIG_BOTTLE_VOLUME, sparklingWater);
 
-        bottleSmall.open(sparklingWater);
-        bottleMedium.open(sparklingWater);
-        bottleBig.open(sparklingWater);
+        bottleSmall.open(sparklingWater, bubblesSmallBottleArray);
+        bottleMedium.open(sparklingWater, bubblesMediumBottleArray);
+        bottleBig.open(sparklingWater, bubblesBigBottleArray);
+    }
+
+    private static Bubble[] pumpBottleWithSparklingWater(double vol, SparklingWater water){
+        int bubblesQuantity = (int) vol * SparklingWater.bubblesPerLitr;
+        Bubble[] bubbles = new Bubble[bubblesQuantity];
+        water.pump(bubbles);
+        return bubbles;
     }
 }
 /*- создать класс Runner, содержащий main

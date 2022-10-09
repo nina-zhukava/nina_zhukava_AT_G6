@@ -10,8 +10,8 @@ public class Bottle {
         this.water = water;
     }
 
-    public void open(SparklingWater sparklingWater) {
-        sparklingWater.degas(volume);
+    public void open(SparklingWater sparklingWater, Bubble[] bubbles) {
+        sparklingWater.degas(bubbles);
     }
 }
 /*- создать класс Bottle

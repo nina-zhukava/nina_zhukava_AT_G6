@@ -2,21 +2,19 @@ package firstHomework.bubbles;
 
 public class SparklingWater extends Water {
 
-    private Bubble[] bubbles;
-    private int bubblesPerLitr = 10000;
+    public static int bubblesPerLitr = 10000;
 
-    public void pump(Bubble[] bubbles) {
+    public void pump(Bubble[] bubbles) { //should it return sparkling water?
         for (int i =0; i < bubbles.length; i++) {
             bubbles[i] = new Bubble("");
         }
     }
 
-    public void degas(double vol) { //todo удаляет
-        int bubblesQuantity = (int)(vol * bubblesPerLitr);
-        bubbles = new Bubble[bubblesQuantity];
-        for (Bubble bubble : this.bubbles) {
+    public void degas(Bubble[] bubbles) { //todo remove bubbles
+        for (Bubble bubble : bubbles) {
             bubble.bubbleCramp();
         }
+        bubbles = new Bubble[0];
     }
 }
 /*- создать класс SparklingWater, являющийся дочерним Water
