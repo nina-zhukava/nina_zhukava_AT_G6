@@ -1,4 +1,4 @@
-package firstHomework.bubbles;
+package src.main.java.project;
 
 public class Bottle {
 

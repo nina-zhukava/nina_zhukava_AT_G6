@@ -1,4 +1,4 @@
-package firstHomework.cycletask;
+package src.main.java.homework.day2;
 
 public class PrintUnevenNumbers_2 {
 

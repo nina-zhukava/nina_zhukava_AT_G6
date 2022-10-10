@@ -1,4 +1,4 @@
-package firstHomework.cycletask;
+package src.main.java.homework.day2;
 
 public class ChangeFirstAndLastElements_9 {
 
@@ -15,7 +15,6 @@ public class ChangeFirstAndLastElements_9 {
                 newArray[i] = array[i];
             }
         }
-
 
         for (int a : array) {
             System.out.print(a + " ");

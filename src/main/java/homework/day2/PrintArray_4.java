@@ -1,15 +1,14 @@
-package firstHomework.cycletask;
+package src.main.java.homework.day2;
 
 import java.util.Random;
 
 public class PrintArray_4 {
 
-    public void printArray(){
-        int n = 10;
-        int[] array = new int[n];
+    public void printArray() {
+        int[] array = new int[10];
         Random random = new Random();
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt(100);
         }
         for (int a : array) {
