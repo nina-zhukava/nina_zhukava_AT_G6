@@ -1,6 +1,6 @@
 package src.main.java.homework.day2;
 
-public class SortDesc_10 {
+public class SortDesc {
 
     public void sortDesc() {
         int[] array = {8, 4, 19, -3};

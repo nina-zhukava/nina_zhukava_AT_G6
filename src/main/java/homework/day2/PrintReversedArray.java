@@ -1,6 +1,6 @@
 package src.main.java.homework.day2;
 
-public class PrintReversedArray_5 {
+public class PrintReversedArray {
 
     public void printReversedArray(){
         int[] array = {1,2,3,4,5};

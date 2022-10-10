@@ -1,6 +1,6 @@
 package src.main.java.homework.day2;
 
-public class ChangeFirstAndLastElements_9 {
+public class ChangeFirstAndLastElements {
 
     public void changeFirstAndLastElements () {
         int[] array = {2,3,4,5,3,5,23,434,21,-3};

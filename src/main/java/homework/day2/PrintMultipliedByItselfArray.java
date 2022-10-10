@@ -1,6 +1,6 @@
 package src.main.java.homework.day2;
 
-public class PrintMultipliedByItselfArray_7 {
+public class PrintMultipliedByItselfArray {
 
     public void printMultipliedByItselfArray() {
         int[] array = {1,2,3,4,5};

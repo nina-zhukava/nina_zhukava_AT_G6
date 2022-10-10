@@ -1,6 +1,6 @@
 package src.main.java.homework.day2;
 
-public class PrintMultipliedByFiveArray_6 {
+public class PrintMultipliedByFiveArray {
 
     public void printMultipliedByFiveArray() {
 

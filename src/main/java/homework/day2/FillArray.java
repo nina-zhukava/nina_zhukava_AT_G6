@@ -2,7 +2,7 @@ package src.main.java.homework.day2;
 
 import java.util.Random;
 
-public class FillArray_3 {
+public class FillArray {
 
     public void fillArray(int arrayLenght) {
         int[] array = new int[arrayLenght];

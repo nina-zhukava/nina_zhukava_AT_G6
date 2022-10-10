@@ -2,7 +2,7 @@ package src.main.java.homework.day2;
 
 import java.util.Random;
 
-public class PrintArray_4 {
+public class PrintArray {
 
     public void printArray() {
         int[] array = new int[10];

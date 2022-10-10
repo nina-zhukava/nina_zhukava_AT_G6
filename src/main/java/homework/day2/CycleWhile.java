@@ -1,6 +1,6 @@
 package src.main.java.homework.day2;
 
-public class CycleWhile_1 {
+public class CycleWhile {
 
     public void printNumbers(int lastNumberToPrint) {
         int counter = 0;

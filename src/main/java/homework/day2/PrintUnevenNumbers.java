@@ -1,6 +1,6 @@
 package src.main.java.homework.day2;
 
-public class PrintUnevenNumbers_2 {
+public class PrintUnevenNumbers {
 
     public void printUnevenNumbers(int startNumber, int endNumber) {
         for (int i = startNumber; i < endNumber + 1; i++) {
