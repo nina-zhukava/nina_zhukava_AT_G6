@@ -1,16 +1,22 @@
-package src.main.java.project;
+package src.main.java.project.bubble;
 
 public class Bubble {
 
-    private static String VOLUME = "0.3 mm";
-    private String composition;
+    private double volume = 0.3;
+    private String gas;
 
-    public Bubble(String composition) {
-        this.composition = composition;
+    //конструктор Bubble(String gas), в который передается строка с названием газа пузырька
+    public Bubble(String gas) {
+        this.gas = gas;
     }
 
-    public void bubbleCramp() {
+    public void cramp() {
         System.out.println("Cramp!");
+    }
+
+    //метод double getVolume(), возвращающий обьем пузырька
+    public double getVolume() {
+        return volume;
     }
 }
 

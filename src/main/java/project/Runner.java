@@ -1,5 +1,9 @@
 package src.main.java.project;
 
+import src.main.java.project.bottle.Bottle;
+import src.main.java.project.bubble.Bubble;
+import src.main.java.project.water.SparklingWater;
+
 public class Runner {
 
     private static double SMALL_BOTTLE_VOLUME = 0.5;
@@ -21,13 +25,6 @@ public class Runner {
         bottleSmall.open(sparklingWater, bubblesSmallBottleArray);
         bottleMedium.open(sparklingWater, bubblesMediumBottleArray);
         bottleBig.open(sparklingWater, bubblesBigBottleArray);
-    }
-
-    private static Bubble[] pumpBottleWithSparklingWater(double vol, SparklingWater water){
-        int bubblesQuantity = (int) (vol * SparklingWater.bubblesPerLitr);
-        Bubble[] bubbles = new Bubble[bubblesQuantity];
-        water.pump(bubbles);
-        return bubbles;
     }
 }
 /*- создать класс Runner, содержащий main
