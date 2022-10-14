@@ -2,17 +2,10 @@ package src.main.java.project.water;
 
 public abstract class Water {
 
-    protected boolean isOpened;
-
     private String color = "no";
     private String transparancy = "transparent";
     private String smell = "no";
     private int temperature = 0;
-
-    public void setOpened(boolean isOpened) {
-        System.out.println("Changing water state to Opened");
-        this.isOpened = true;
-    }
 
     public String getColor() {
         return color;

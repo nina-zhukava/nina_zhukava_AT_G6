@@ -1,7 +1,6 @@
 package src.main.java.project;
 
 import src.main.java.project.bottle.Bottle;
-import src.main.java.project.bubble.Bubble;
 import src.main.java.project.water.SparklingWater;
 
 public class Runner {
@@ -12,19 +11,19 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        SparklingWater sparklingWater = new SparklingWater();
+        Bottle bottleSmall = new Bottle(1.5);
+        SparklingWater smallBottleWater = (SparklingWater) bottleSmall.getWater();
+        smallBottleWater.setOpened(true);
 
-        Bubble[] bubblesSmallBottleArray = pumpBottleWithSparklingWater(SMALL_BOTTLE_VOLUME, sparklingWater);
-        Bubble[] bubblesMediumBottleArray = pumpBottleWithSparklingWater(MEDIUM_BOTTLE_VOLUME, sparklingWater);
-        Bubble[] bubblesBigBottleArray = pumpBottleWithSparklingWater(BIG_BOTTLE_VOLUME, sparklingWater);
+        bottleSmall.warm(12);
 
-        Bottle bottleSmall = new Bottle(SMALL_BOTTLE_VOLUME, sparklingWater);
+/*        Bottle bottleSmall = new Bottle(SMALL_BOTTLE_VOLUME, sparklingWater);
         Bottle bottleMedium = new Bottle(MEDIUM_BOTTLE_VOLUME, sparklingWater);
         Bottle bottleBig = new Bottle(BIG_BOTTLE_VOLUME, sparklingWater);
 
         bottleSmall.open(sparklingWater, bubblesSmallBottleArray);
         bottleMedium.open(sparklingWater, bubblesMediumBottleArray);
-        bottleBig.open(sparklingWater, bubblesBigBottleArray);
+        bottleBig.open(sparklingWater, bubblesBigBottleArray);*/
     }
 }
 /*- создать класс Runner, содержащий main

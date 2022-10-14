@@ -4,7 +4,8 @@ import src.main.java.project.bubble.Bubble;
 
 public class SparklingWater extends Water {
 
-    Bubble[] bubbles;
+    private boolean isOpened;
+    private Bubble[] bubbles;
     public int bubblesPerLitr = 10000;//?
 
     //конструктор SparklingWater(), который вызывает внутренний метод isOpened();
@@ -14,13 +15,13 @@ public class SparklingWater extends Water {
 
     // публичный метод void pump(Bubble[] bubbles), который сетает массив из пузырьков в воду
     public void pump(Bubble[] bubbles) { //а где мы создаем пузырьки?
+        //        System.out.println("The water is filling in with bubbles"); //или это все-таки в ботл происходит
         for (int i = 0; i < bubbles.length; i++) {
-            bubbles[i] = new Bubble("");
+            bubbles[i] = new Bubble("CO2");
         }
     }
 
     //публичный метод void setOpened(boolean isOpened), который меняет состояние воды на "открытое"
-    @Override
     public void setOpened(boolean isOpened) {
         System.out.println("Changing water state to Opened");
         this.isOpened = true;
@@ -41,11 +42,15 @@ public class SparklingWater extends Water {
         for (Bubble bubble : bubbles) {
             bubble.cramp();
         }
-        bubbles = new Bubble[0];
     }
 
     //публичный метод boolean isSparkle(), возвращающий true если в воде еще есть пузырьки газа
     public boolean isSparkle() {
-        return false;
+        System.out.println("Checking if there are bubbles left in the water");
+        if (bubbles.length != 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
