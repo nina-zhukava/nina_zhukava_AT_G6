@@ -5,25 +5,12 @@ import src.main.java.project.water.SparklingWater;
 
 public class Runner {
 
-    private static double SMALL_BOTTLE_VOLUME = 0.5;
-    private static double MEDIUM_BOTTLE_VOLUME = 1;
-    private static double BIG_BOTTLE_VOLUME = 1.5;
-
     public static void main(String[] args) {
-
         Bottle bottleSmall = new Bottle(1.5);
         SparklingWater smallBottleWater = (SparklingWater) bottleSmall.getWater();
         smallBottleWater.setOpened(true);
 
         bottleSmall.warm(12);
-
-/*        Bottle bottleSmall = new Bottle(SMALL_BOTTLE_VOLUME, sparklingWater);
-        Bottle bottleMedium = new Bottle(MEDIUM_BOTTLE_VOLUME, sparklingWater);
-        Bottle bottleBig = new Bottle(BIG_BOTTLE_VOLUME, sparklingWater);
-
-        bottleSmall.open(sparklingWater, bubblesSmallBottleArray);
-        bottleMedium.open(sparklingWater, bubblesMediumBottleArray);
-        bottleBig.open(sparklingWater, bubblesBigBottleArray);*/
     }
 }
 /*- создать класс Runner, содержащий main

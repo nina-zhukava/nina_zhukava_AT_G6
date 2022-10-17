@@ -6,7 +6,7 @@ public class SparklingWater extends Water {
 
     private boolean isOpened;
     private Bubble[] bubbles;
-    public int bubblesPerLitr = 10000;//?
+    private int bubblesPerLitr = 10000;
 
     //конструктор SparklingWater(), который вызывает внутренний метод isOpened();
     public SparklingWater() {
@@ -41,16 +41,13 @@ public class SparklingWater extends Water {
         System.out.println("Bubbles are leaving water");
         for (Bubble bubble : bubbles) {
             bubble.cramp();
+            bubble = null;
         }
     }
 
     //публичный метод boolean isSparkle(), возвращающий true если в воде еще есть пузырьки газа
     public boolean isSparkle() {
         System.out.println("Checking if there are bubbles left in the water");
-        if (bubbles.length != 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return bubbles.length != 0;
     }
 }

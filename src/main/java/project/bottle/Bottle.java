@@ -39,7 +39,7 @@ public class Bottle {
     }
 
     //публичный метод setWater(Water water) добавляющий новый обьект воды
-    public Water setWater() {
-        return null;
+    public void setWater(Water water) {
+        this.water = water;
     }
 }
