@@ -9,6 +9,7 @@ public class StringObjectRunner {
         PrintChars printChars = new PrintChars();
         PrintGeneratedDate printGeneratedDate = new PrintGeneratedDate();
         PrintCurrentDate printCurrentDate = new PrintCurrentDate();
+        PrintLogSummary printLogSummary = new PrintLogSummary();
 
         findDuplicates.findDuplicates("th th fhgf xgjfd jts ftf fftf ftf ");
         findNumbers.findNumbers("vkuy576r 6u5e utre54 urdu");
@@ -16,6 +17,18 @@ public class StringObjectRunner {
         printChars.printChars("ihnoh g");
         printGeneratedDate.printGeneratedDate("euыliytvuyek ydtkytdsjtr di67 eiytdy te574 wurd");
         printCurrentDate.printCurrentDate();
+        printLogSummary.printLogSummary("access_log.2020.09.07 212.168.101.5 granted\n" +
+                                                "access_log.2020.09.07 212.168.101.6 denied\n" +
+                                                "access_log.2020.09.07 212.168.101.6 denied\n" +
+                                                "access_log.2020.09.07 212.168.122.6 denied\n" +
+                                                "access_log.2020.09.07 212.168.101.5 granted\n" +
+                                                "access_log.2020.09.07 212.168.101.6 granted\n" +
+                                                "access_log.2020.09.07 212.168.101.6 granted\n" +
+                                                "access_log.2020.09.07 212.168.122.6 granted\n" +
+                                                "access_log.2020.09.07 212.168.101.5 granted\n" +
+                                                "access_log.2020.09.07 212.168.101.6 granted\n" +
+                                                "access_log.2020.09.07 212.168.101.6 granted\n" +
+                                                "access_log.2020.09.07 212.168.122.6 denied");
     }
 }
 
