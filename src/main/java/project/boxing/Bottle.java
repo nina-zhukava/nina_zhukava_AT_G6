@@ -1,20 +1,38 @@
-package src.main.java.project.bottle;
+package src.main.java.project.boxing;
 
+import src.main.java.project.boxing.materials.Glass;
+import src.main.java.project.boxing.materials.Material;
 import src.main.java.project.bubble.Bubble;
-import src.main.java.project.water.SparklingWater;
-import src.main.java.project.water.Water;
+import src.main.java.project.content.Containable;
+import src.main.java.project.content.SparklingWater;
+import src.main.java.project.content.Transformable;
+import src.main.java.project.content.Water;
 
-public class Bottle {
+public class Bottle extends Vessel implements Containable {
 
     private double volume;
     private Water water;
 
+    public Bottle() {
+        super(1.0, 8.0, 1, new Glass());
+    }
+
+    public Bottle(double volume, double diameter, int weight, Material material) {
+        super(volume, diameter, weight, material);
+        System.out.println("The bottle is filling in with bubbles");
+//        this.volume = volume;
+        this.water = new SparklingWater();
+        Bubble[] bubbles = new Bubble[(int) (volume * 10000)];
+        ((SparklingWater) water).pump(bubbles);
+    }
+
     //Bottle(double volume), в котором бутылка заполняется массивом из пузырьков из рассчета 10000 на каждый литр
+    //как сочетать с конструктором выше? добавила в вессел пустой конструктор пока
     public Bottle(double vol) {
         System.out.println("The bottle is filling in with bubbles");
-        this.volume = vol;
+        this.volume = volume;
         this.water = new SparklingWater();
-        Bubble[] bubbles = new Bubble[(int) (vol * 10000)];
+        Bubble[] bubbles = new Bubble[(int) (volume * 10000)];
         ((SparklingWater) water).pump(bubbles);
     }
 
@@ -33,13 +51,35 @@ public class Bottle {
         this.water.setTemperature(temperature);
     }
 
-    //публичный метод Water getWater() возвращающий обьект воды
     public Water getWater() {
         return this.water;
     }
-
-    //публичный метод setWater(Water water) добавляющий новый обьект воды
     public void setWater(Water water) {
         this.water = water;
+    }
+
+    @Override
+    public void addStuff(Transformable stuff) {
+
+    }
+
+    @Override
+    public Transformable removeStuff() {
+        return null;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return false;
+    }
+
+    @Override
+    public int getFreeSpace() {
+        return 0;
+    }
+
+    @Override
+    public void close() {
+
     }
 }

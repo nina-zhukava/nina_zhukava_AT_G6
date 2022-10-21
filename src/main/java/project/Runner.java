@@ -1,16 +1,14 @@
 package src.main.java.project;
 
-import src.main.java.project.bottle.Bottle;
-import src.main.java.project.water.SparklingWater;
-
 public class Runner {
 
     public static void main(String[] args) {
-        Bottle bottleSmall = new Bottle(1.5);
+/*        Bottle bottleSmall = new Bottle(1.5);
         SparklingWater smallBottleWater = (SparklingWater) bottleSmall.getWater();
         smallBottleWater.setOpened(true);
 
-        bottleSmall.warm(12);
+        bottleSmall.warm(12);*/
+
     }
 }
 /*- создать класс Runner, содержащий main

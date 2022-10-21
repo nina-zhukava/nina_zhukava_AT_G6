@@ -1,6 +1,6 @@
-package src.main.java.project.water;
+package src.main.java.project.content;
 
-public abstract class Water {
+public abstract class Water implements Transformable{
 
     private String color = "no";
     private String transparancy = "transparent";
