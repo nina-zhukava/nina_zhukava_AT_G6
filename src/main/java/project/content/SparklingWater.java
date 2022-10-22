@@ -1,4 +1,4 @@
-package src.main.java.project.water;
+package src.main.java.project.content;
 
 import src.main.java.project.bubble.Bubble;
 
