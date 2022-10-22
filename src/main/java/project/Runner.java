@@ -9,6 +9,9 @@ public class Runner {
 
         bottleSmall.warm(12);*/
 
+        Warehouse wh = new Warehouse();
+//        System.out.println(wh.bottleBox.);
+
     }
 }
 /*- создать класс Runner, содержащий main
