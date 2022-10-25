@@ -30,9 +30,9 @@ public class Elements {
             System.out.print(elements.get(i) + " ");
         }
         System.out.println();
-        elements.add(3, "Spinner");
-        elements.remove(1);
-        elements.set(4, "Switch");
+        elements.add(4, "Spinner");
+        elements.remove(2);
+        elements.set(5, "Switch");
 
         for (String s : elements) {
             System.out.print(s + " ");

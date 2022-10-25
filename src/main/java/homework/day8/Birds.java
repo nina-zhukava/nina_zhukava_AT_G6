@@ -26,7 +26,7 @@ public class Birds {
             }
         }
         System.out.println(counter);
-        birds.set(2, "Синица");
+        birds.set(3, "Синица");
         for (String s : birds) {
             System.out.println(s + " ");
         }

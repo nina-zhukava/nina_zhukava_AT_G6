@@ -15,7 +15,7 @@ public class Cars {
         BufferedWriter out = new BufferedWriter(new FileWriter("cars.txt"));
         StringBuilder toPrint = new StringBuilder();
         for (String s : cars) {
-            toPrint.append(s).append("\n");
+            toPrint.append("\"").append(s).append("\"").append("\n");
         }
         out.write(toPrint.toString());
 
