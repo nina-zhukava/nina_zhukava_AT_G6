@@ -1,13 +1,16 @@
 package src.main.java.homework.day8;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Countries {
 
     public static void main(String[] args) {
-        List<String> countries = new ArrayList<>(Arrays.asList("Андора", "Португалия", "Англия", "Замбия"));
+        List<String> countries = new ArrayList<>();
+        countries.add("Андора");
+        countries.add("Португалия");
+        countries.add("Англия");
+        countries.add("Замбия");
         for (String s : countries) {
             if (countries.indexOf(s) == countries.size() - 1) {
                 System.out.println(s);
