@@ -20,6 +20,7 @@ public class SandBox {
             System.out.print(s.getWeight() + " ");
         }
         System.out.println();
+
         for (Sand s : sandbox) {
             System.out.print(s.getName() + " ");
         }
