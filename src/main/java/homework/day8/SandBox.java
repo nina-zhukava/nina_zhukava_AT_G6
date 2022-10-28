@@ -29,12 +29,12 @@ public class SandBox {
         for (int i = 0; i < sandbox.size(); i++) {
             sandMap.put(i, sandbox.get(i));
         }
-        for (Map.Entry<Integer, Sand> m : sandMap.entrySet()) {
-            System.out.print(m.getKey() + " ");
+        for (int m : sandMap.keySet()) {
+            System.out.print(m + " ");
         }
         System.out.println();
-        for (Map.Entry<Integer, Sand> m : sandMap.entrySet()) {
-            System.out.print(m.getValue() + " ");
+        for (Sand s : sandMap.values()) {
+            System.out.print(s + " ");
         }
         System.out.println();
         for (Map.Entry<Integer, Sand> m : sandMap.entrySet()) {
