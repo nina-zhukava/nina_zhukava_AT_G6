@@ -3,7 +3,7 @@ package src.main.java.project.content;
 public abstract class Water implements Transformable{
 
     private String color = "no";
-    private String transparancy = "transparent";
+    private String transparency = "transparent";
     private String smell = "no";
     private int temperature = 0;
 
@@ -15,12 +15,12 @@ public abstract class Water implements Transformable{
         this.color = color;
     }
 
-    public String getTransparancy() {
-        return transparancy;
+    public String getTransparency() {
+        return transparency;
     }
 
-    public void setTransparancy(String transparancy) {
-        this.transparancy = transparancy;
+    public void setTransparency(String transparency) {
+        this.transparency = transparency;
     }
 
     public String getSmell() {

@@ -2,10 +2,12 @@ package src.main.java.project.content;
 
 import src.main.java.project.bubble.Bubble;
 
+import java.util.List;
+
 public class SparklingWater extends Water {
 
     private boolean isOpened;
-    private Bubble[] bubbles;
+    private List<Bubble> bubbles;
     private int bubblesPerLitr = 10000;
 
     //конструктор SparklingWater(), который вызывает внутренний метод isOpened();
@@ -14,10 +16,9 @@ public class SparklingWater extends Water {
     }
 
     // публичный метод void pump(Bubble[] bubbles), который сетает массив из пузырьков в воду
-    public void pump(Bubble[] bubbles) { //а где мы создаем пузырьки?
-        //        System.out.println("The water is filling in with bubbles"); //или это все-таки в ботл происходит
-        for (int i = 0; i < bubbles.length; i++) {
-            bubbles[i] = new Bubble("CO2");
+    public void pump(List<Bubble> bubbles) { //а где мы создаем пузырьки?
+        for (int i = 0; i < bubbles.size(); i++) {
+            bubbles.set(i, new Bubble("CO2"));
         }
     }
 
@@ -37,17 +38,17 @@ public class SparklingWater extends Water {
     }
 
     //приватный метод degas(), который каждую секунду выпускает по партии пузырьков из рассчета 10 + 5 * температура_воды
-    private void degas(Bubble[] bubbles) { //todo remove bubbles
+    private void degas(List<Bubble> bubbles) {
         System.out.println("Bubbles are leaving water");
         for (Bubble bubble : bubbles) {
             bubble.cramp();
-            bubble = null;
+            bubbles.remove(bubble);
         }
     }
 
     //публичный метод boolean isSparkle(), возвращающий true если в воде еще есть пузырьки газа
     public boolean isSparkle() {
         System.out.println("Checking if there are bubbles left in the water");
-        return bubbles.length != 0;
+        return bubbles.size() != 0;
     }
 }
