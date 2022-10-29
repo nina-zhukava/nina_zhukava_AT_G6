@@ -8,6 +8,9 @@ import src.main.java.project.content.SparklingWater;
 import src.main.java.project.content.Transformable;
 import src.main.java.project.content.Water;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Bottle extends Vessel implements Containable {
 
     private double volume;
@@ -20,9 +23,8 @@ public class Bottle extends Vessel implements Containable {
     public Bottle(double volume, double diameter, int weight, Material material) {
         super(volume, diameter, weight, material);
         System.out.println("The bottle is filling in with bubbles");
-//        this.volume = volume;
         this.water = new SparklingWater();
-        Bubble[] bubbles = new Bubble[(int) (volume * 10000)];
+        List<Bubble> bubbles = new ArrayList<>((int) (volume * 10000));
         ((SparklingWater) water).pump(bubbles);
     }
 
@@ -30,9 +32,9 @@ public class Bottle extends Vessel implements Containable {
     //как сочетать с конструктором выше? добавила в вессел пустой конструктор пока
     public Bottle(double vol) {
         System.out.println("The bottle is filling in with bubbles");
-        this.volume = volume;
+        this.volume = vol;
         this.water = new SparklingWater();
-        Bubble[] bubbles = new Bubble[(int) (volume * 10000)];
+        List<Bubble> bubbles = new ArrayList<>((int) (volume * 10000));
         ((SparklingWater) water).pump(bubbles);
     }
 
@@ -41,7 +43,7 @@ public class Bottle extends Vessel implements Containable {
     public void open() {
         if (water instanceof SparklingWater) {
             System.out.println("Changes water state to Open");
-            ((SparklingWater) water).setOpened(true); //как запустить degas?
+            ((SparklingWater) water).setOpened(true);
         }
     }
 
@@ -54,6 +56,7 @@ public class Bottle extends Vessel implements Containable {
     public Water getWater() {
         return this.water;
     }
+
     public void setWater(Water water) {
         this.water = water;
     }

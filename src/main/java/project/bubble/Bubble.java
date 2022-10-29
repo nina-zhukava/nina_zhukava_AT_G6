@@ -11,7 +11,6 @@ public class Bubble {
     }
 
     public void cramp() {
-        //тут тоже сообщение о том что делает метод, или "крамп!" достаточно?
         System.out.println("Cramp!");
     }
 
