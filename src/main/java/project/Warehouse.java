@@ -9,8 +9,12 @@ public class Warehouse {
     public static void main(String[] args) {
         // Создать 2 объекта класса VesselBox с бутылками и кружками в классе Warehouse
         // и вывести на экран имена хранимых обьектов.
-        VesselBox<Bottle> bottleBox = new VesselBox<>(new Bottle(), 3);
+        VesselBox<Bottle> bottleBox = new VesselBox<>(new Bottle(), 9);
         VesselBox<Cup> cupBox = new VesselBox<>(new Cup(), 25);
+        for (int i = 0; i < 9; i++) {
+            System.out.println(bottleBox.getT().get(i));
+        }
+
 
     }
 }
