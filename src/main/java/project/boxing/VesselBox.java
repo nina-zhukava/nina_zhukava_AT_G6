@@ -11,7 +11,7 @@ public class VesselBox<T extends Vessel> {
         if (i == 9 || i == 25 || i == 36) {
             this.t = new ArrayList<>(i);
             for (int j = 0; j < i; j++) {
-//                t.set(j, new o);
+                t.set(j, o);
             }
         } else {
             System.out.println("Cannot create box with this capacity");
@@ -20,6 +20,10 @@ public class VesselBox<T extends Vessel> {
 
     public List<T> getT() {
         return t;
+    }
+
+    public int getSize() {
+        return t.size();
     }
 
     public void setT(List<T> t) {
