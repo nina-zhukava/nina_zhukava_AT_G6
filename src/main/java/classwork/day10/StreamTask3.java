@@ -5,6 +5,7 @@ import src.main.java.classwork.day9.Person;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class StreamTask3 {
     public static void main(String[] args) {
@@ -30,5 +31,8 @@ public class StreamTask3 {
                 .flatMap(s -> Arrays.stream(s.trim().split("")))
                 .count());
         System.out.println(list.stream().map(String::length).mapToInt(s -> s % 2 == 1 ? s : 0).sum());
+        System.out.println(list.stream().collect(Collectors.joining(":", "<p>", "/<p>")));
+        System.out.println(people.stream().collect(Collectors.toMap(person -> person.hashCode(), person -> person)));
+        System.out.println(people.stream().collect(Collectors.groupingBy(person -> person.sex)).keySet());
     }
 }
