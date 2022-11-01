@@ -29,5 +29,6 @@ public class StreamTask3 {
                 .filter(s -> !(s.length() % 2 == 0))
                 .flatMap(s -> Arrays.stream(s.trim().split("")))
                 .count());
+        System.out.println(list.stream().map(String::length).mapToInt(s -> s % 2 == 1 ? s : 0).sum());
     }
 }
