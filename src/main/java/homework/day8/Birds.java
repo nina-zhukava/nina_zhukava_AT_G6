@@ -9,26 +9,10 @@ public class Birds {
     public static void main(String[] args) {
         List<String> birds = new ArrayList<>(Arrays.asList("Чайка", "Дрозд", "Бусел", "Голубь", "Воробей", "Цапля"));
 
-        for (String s : birds) {
-            System.out.println("--" + s + "--");
-        }
-        int counter = 0;
-        for (String s : birds) {
-            int internalCounter = 0;
-            String[] b = s.trim().split("");
-            for (int i = 0; i < s.length(); i++) {
-                if (b[i].toLowerCase().matches("[аяуюоеёэиы]")) {
-                    internalCounter++;
-                }
-            }
-            if (internalCounter > 1) {
-                counter++;
-            }
-        }
-        System.out.println(counter);
+        birds.forEach(s -> System.out.println("--" + s + "--"));
+        System.out.println(birds.stream().filter
+                (s -> Arrays.stream(s.split("")).filter(a -> a.matches("[аяуюоеёэиы]")).count() >= 2).count());
         birds.set(3, "Синица");
-        for (String s : birds) {
-            System.out.println(s + " ");
-        }
+        birds.forEach(s -> System.out.print(s + " "));
     }
 }

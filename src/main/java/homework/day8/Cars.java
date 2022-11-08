@@ -14,21 +14,11 @@ public class Cars {
                 "Ауди"));
         BufferedWriter out = new BufferedWriter(new FileWriter("cars.txt"));
         StringBuilder toPrint = new StringBuilder();
-        for (String s : cars) {
+        cars.forEach(s -> {
             toPrint.append("\"").append(s).append("\"").append("\n");
-        }
+        });
         out.write(toPrint.toString());
-
         out.close();
-        List<String> citiesToRemove = new ArrayList<>();
-        for (String s : cars) {
-            if (s.length() > 4) {
-                citiesToRemove.add(s);
-            }
-        }
-        cars.removeAll(citiesToRemove);
-        for (String s : cars) {
-            System.out.print(s + " ");
-        }
+        cars.stream().filter(s -> !(s.length() > 4)).forEach(s -> System.out.print(s + " "));
     }
 }

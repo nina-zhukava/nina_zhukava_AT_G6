@@ -1,27 +1,15 @@
 package src.main.java.homework.day2;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class ChangeFirstAndLastElements {
 
-    public void changeFirstAndLastElements () {
-        int[] array = {2,3,4,5,3,5,23,434,21,-3};
-        int lastItemIndex = array.length - 1;
-        int[] newArray = new int[array.length];
-        for (int i = 0; i <= lastItemIndex; i++ ) {
-            if (i == 0) {
-                newArray[lastItemIndex] = array[0];
-            } else if (i == lastItemIndex) {
-                newArray[0] = array[lastItemIndex];
-            } else {
-                newArray[i] = array[i];
-            }
-        }
-
-        for (int a : array) {
-            System.out.print(a + " ");
-        }
-        System.out.println();
-        for (int a : newArray) {
-            System.out.print(a + " ");
-        }
+    public void changeFirstAndLastElements() {
+        List<Integer> array = Arrays.asList(2, 3, 7, 38);
+        int firstItem = array.get(0);
+        array.set(0, array.get(array.size() - 1));
+        array.set(array.size() - 1, firstItem);
+        array.forEach(s -> System.out.println(s + " "));
     }
 }

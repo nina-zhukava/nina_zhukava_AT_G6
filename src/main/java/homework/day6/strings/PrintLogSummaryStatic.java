@@ -1,12 +1,21 @@
 package src.main.java.homework.day6.strings;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class PrintLogSummaryStatic {
-//    1.4 имеется текстовый лог в виде (ниже общий вид, т.е. частный случай):
+    //    1.4 имеется текстовый лог в виде (ниже общий вид, т.е. частный случай):
 //access_log.2020.09.07 212.168.101.5 granted
 //access_log.2020.09.07 212.168.101.6 denied
 //написать метод, который принимает на вход текст лога и выводит список из уникальных IP адресов и количества удачных и неудачных попыток доступа в формате:
 //ip 212.168.101.5: ok - 3, failed - 2
     public static void printLogSummary(String log) {
+        List<String> list = Arrays.stream(log.trim().split("\n")).collect(Collectors.toList());
+
+
+        /*Map<String, List<String>> msp =
+                list.stream().collect(Collectors.groupingBy(s -> Arrays.stream(s.split(" ")).findFirst()));*/
         String[] splitLogArray = log.trim().split("\n");
         String[] cutLogArray = new String[splitLogArray.length];
         int cutStrIndex = 0;

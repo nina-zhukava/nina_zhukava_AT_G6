@@ -1,4 +1,6 @@
-package src.main.java.project.boxing;
+package src.main.java.project.warehouse;
+
+import src.main.java.project.vessel.Vessel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +12,7 @@ public class VesselBox<T extends Vessel> {
     public VesselBox(T o, int i) {
         if (i == 9 || i == 25 || i == 36) {
             this.t = new ArrayList<>(i);
-            for (int j = 0; j < i; j++) {
+            for (int j = 0; j < i; j++) { //как заменить?
                 t.set(j, o);
             }
         } else {

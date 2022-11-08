@@ -1,24 +1,21 @@
 package src.main.java.homework.day6.strings;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
 public class FindDuplicatesStatic {
 
     // метод, который позволяет найти и вывести в консоль все дубликаты слов в строке текста, который принимает на
 // вход в виде аргумента.
     public static void findDuplicates(String str) {
-        String[] splitString = str.trim().split(" ");
-
-        for (int outerIndex = 0; outerIndex < splitString.length; outerIndex++) {
-            String stringInWork = splitString[outerIndex];
-            Boolean toPrint = false;
-            for (int i = outerIndex + 1; i < splitString.length; i++) {
-                if (stringInWork.equalsIgnoreCase(splitString[i])) {
-                    splitString[i] = "";
-                    toPrint = true;
-                }
-            }
-            if (toPrint) {
-                System.out.print(stringInWork + " ");
-            }
-        }
+        List<String> splitString = Arrays.stream(str.trim().split(" ")).collect(Collectors.toList());
+        Set<String> set = new HashSet<>();
+        splitString.stream()
+                .filter(n -> !set.add(n))
+                .collect(Collectors.toSet())
+                .forEach(System.out::println);
     }
 }

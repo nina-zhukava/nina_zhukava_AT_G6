@@ -11,23 +11,14 @@ public class Countries {
         countries.add("Португалия");
         countries.add("Англия");
         countries.add("Замбия");
-        for (String s : countries) {
+        countries.forEach(s -> {
             if (countries.indexOf(s) == countries.size() - 1) {
                 System.out.println(s);
             } else {
                 System.out.print(s + ", ");
             }
-        }
-        int counter = 0;
-        for (String s : countries) {
-            if (s.length() < 7) {
-                counter++;
-            }
-        }
-        System.out.println(counter);
-
-        for (int i = 0; i < countries.size(); i++) {
-            System.out.println(countries.get(i));
-        }
+        });
+        System.out.println(countries.stream().filter(s -> s.length() < 7).count());
+        countries.forEach(System.out::println);
     }
 }

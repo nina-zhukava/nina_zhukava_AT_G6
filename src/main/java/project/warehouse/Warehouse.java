@@ -1,8 +1,7 @@
-package src.main.java.project;
+package src.main.java.project.warehouse;
 
-import src.main.java.project.boxing.Bottle;
-import src.main.java.project.boxing.Cup;
-import src.main.java.project.boxing.VesselBox;
+import src.main.java.project.vessel.Bottle;
+import src.main.java.project.vessel.Cup;
 
 public class Warehouse {
 
@@ -11,9 +10,8 @@ public class Warehouse {
         // и вывести на экран имена хранимых обьектов.
         VesselBox<Bottle> bottleBox = new VesselBox<>(new Bottle(), 9);
         VesselBox<Cup> cupBox = new VesselBox<>(new Cup(), 25);
-        for (int i = 0; i < 9; i++) {
-            System.out.println(bottleBox.getT().get(i));
-        }
+
+        bottleBox.getT().stream().peek(s -> System.out.println(s));
 
 
     }

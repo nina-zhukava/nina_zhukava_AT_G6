@@ -1,4 +1,6 @@
-package src.main.java.project;
+package src.main.java.project.runner;
+
+import src.main.java.project.warehouse.Warehouse;
 
 public class Runner {
 

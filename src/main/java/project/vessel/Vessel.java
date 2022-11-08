@@ -1,15 +1,15 @@
-package src.main.java.project.boxing;
+package src.main.java.project.vessel;
 
-import src.main.java.project.boxing.materials.Material;
+import src.main.java.project.material.OldMaterial;
 
 public abstract class Vessel {
 
     private double volume;
     private double diameter;
     private int weight;
-    private Material material;
+    private OldMaterial material;
 
-    public Vessel(double volume, double diameter, int weight, Material material) {
+    public Vessel(double volume, double diameter, int weight, OldMaterial material) {
         this.volume = volume;
         this.diameter = diameter;
         this.weight = weight;
@@ -43,11 +43,11 @@ public abstract class Vessel {
         this.weight = weight;
     }
 
-    public Material getMaterial() {
+    public OldMaterial getMaterial() {
         return material;
     }
 
-    public void setMaterial(Material material) {
+    public void setMaterial(OldMaterial material) {
         this.material = material;
     }
 }
