@@ -1,17 +1,16 @@
 package src.main.java.project.vessel;
 
-import src.main.java.project.material.Metal;
-import src.main.java.project.material.OldMaterial;
+import src.main.java.project.material.Material;
 import src.main.java.project.stuff.Transformable;
 
 public class Can extends Vessel implements Containable {
 
-    public Can(double volume, double diameter, int weight, OldMaterial material) {
+    public Can(double volume, double diameter, int weight, Material material) {
         super(volume, diameter, weight, material);
     }
 
     public Can() {
-        super(0.4, 5, 1, new Metal());
+        super(0.4, 5, 1, Material.METAL);
     }
 
     @Override
