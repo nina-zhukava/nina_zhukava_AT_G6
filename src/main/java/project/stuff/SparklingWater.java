@@ -1,7 +1,6 @@
-package src.main.java.project.content;
+package src.main.java.project.stuff;
 
-import src.main.java.project.bubble.Bubble;
-
+import java.util.ArrayList;
 import java.util.List;
 
 public class SparklingWater extends Water {
@@ -10,22 +9,18 @@ public class SparklingWater extends Water {
     private List<Bubble> bubbles;
     private int bubblesPerLitr = 10000;
 
-    //конструктор SparklingWater(), который вызывает внутренний метод isOpened();
+    //конструктор, который сетает нужное количество пузырьков из рассчета, что 1 литр воды
+    // содержит 10 тыс пузырьков и вызывает внутренний метод isOpened()
     public SparklingWater() {
+        this.bubbles = new ArrayList<>();//todo set
         isOpened();
     }
 
     // публичный метод void pump(Bubble[] bubbles), который сетает массив из пузырьков в воду
     public void pump(List<Bubble> bubbles) { //а где мы создаем пузырьки?
         for (int i = 0; i < bubbles.size(); i++) {
-            bubbles.set(i, new Bubble("CO2"));
+            bubbles.set(i, new Bubble(/*"CO2"*/));
         }
-    }
-
-    //публичный метод void setOpened(boolean isOpened), который меняет состояние воды на "открытое"
-    public void setOpened(boolean isOpened) {
-        System.out.println("Changing water state to Opened");
-        this.isOpened = true;
     }
 
     //приватный метод void isOpened(), который в новом потоке проверят состояние воды на "открытость"
@@ -50,5 +45,10 @@ public class SparklingWater extends Water {
     public boolean isSparkle() {
         System.out.println("Checking if there are bubbles left in the water");
         return bubbles.size() != 0;
+    }
+
+    @Override
+    public void setOpened() {
+        this.isOpened = true;
     }
 }

@@ -1,16 +1,13 @@
 package src.main.java.homework.day2;
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+
 public class PrintMinElement {
 
     public void printMinElement() {
-        int[] array = {1,2,3,4,5,3,5,23,434,21,-3};
-
-        int min = array[0];
-        for (int arrayElement : array) {
-            if (arrayElement < min){
-                min = arrayElement;
-            }
-        }
-        System.out.println(min);
+        List<Integer> array = Arrays.asList(2, 3, 7, 38);
+        System.out.println(array.stream().min(Comparator.naturalOrder()).get());
     }
 }

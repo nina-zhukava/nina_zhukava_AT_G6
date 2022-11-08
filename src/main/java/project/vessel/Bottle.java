@@ -1,12 +1,11 @@
-package src.main.java.project.boxing;
+package src.main.java.project.vessel;
 
-import src.main.java.project.boxing.materials.Glass;
-import src.main.java.project.boxing.materials.Material;
-import src.main.java.project.bubble.Bubble;
-import src.main.java.project.content.Containable;
-import src.main.java.project.content.SparklingWater;
-import src.main.java.project.content.Transformable;
-import src.main.java.project.content.Water;
+import src.main.java.project.material.Glass;
+import src.main.java.project.material.OldMaterial;
+import src.main.java.project.stuff.Bubble;
+import src.main.java.project.stuff.SparklingWater;
+import src.main.java.project.stuff.Transformable;
+import src.main.java.project.stuff.Water;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +19,7 @@ public class Bottle extends Vessel implements Containable {
         super(1.0, 8.0, 1, new Glass());
     }
 
-    public Bottle(double volume, double diameter, int weight, Material material) {
+    public Bottle(double volume, double diameter, int weight, OldMaterial material) {
         super(volume, diameter, weight, material);
         System.out.println("The bottle is filling in with bubbles");
         this.water = new SparklingWater();
@@ -41,10 +40,10 @@ public class Bottle extends Vessel implements Containable {
     //есть публичный метод void open(), который меняет состояние воды в "открытое"(~ как this.water.setOpened(true);)
     //который вызывает метод degas() в газировке (требование с первой домашки)
     public void open() {
-        if (water instanceof SparklingWater) {
+/*        if (water instanceof SparklingWater) {
             System.out.println("Changes water state to Open");
             ((SparklingWater) water).setOpened(true);
-        }
+        }*/
     }
 
     // публичный метод void warm(int temperature), который устанавливает температуру воды в бутылке

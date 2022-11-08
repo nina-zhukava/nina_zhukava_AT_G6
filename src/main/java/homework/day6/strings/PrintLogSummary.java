@@ -7,6 +7,7 @@ public class PrintLogSummary {
 //написать метод, который принимает на вход текст лога и выводит список из уникальных IP адресов и количества удачных и неудачных попыток доступа в формате:
 //ip 212.168.101.5: ok - 3, failed - 2
     public void printLogSummary(String log) {
+
         String[] splitLogArray = log.trim().split("\n");
         String[] cutLogArray = new String[splitLogArray.length];
         int cutStrIndex = 0;

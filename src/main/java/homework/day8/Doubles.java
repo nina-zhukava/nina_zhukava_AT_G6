@@ -8,11 +8,11 @@ public class Doubles {
 
     public static void main(String[] args) {
         List<Double> doubles = new ArrayList<>(Arrays.asList(33.42, 34.3, 0.79, 2.3426, 6.8, 13.24, 5.5, 769.9));
-        for (double i : doubles) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
+        doubles.forEach(s -> System.out.print(s + " "));
         double result = 1;
+//        doubles.stream().mapToDouble(Double::shortValue).map((s1,s2) -> s1 * s2)
+        System.out.println();
+
         for (double i : doubles) {
             result *= i;
         }

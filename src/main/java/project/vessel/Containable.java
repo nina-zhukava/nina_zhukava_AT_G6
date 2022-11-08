@@ -1,4 +1,6 @@
-package src.main.java.project.content;
+package src.main.java.project.vessel;
+
+import src.main.java.project.stuff.Transformable;
 
 public interface Containable {
 

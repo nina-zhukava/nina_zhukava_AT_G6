@@ -1,23 +1,15 @@
 package src.main.java.homework.day2;
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class SortDesc {
 
     public void sortDesc() {
-        int[] array = {8, 4, 19, -3};
-
-        for (int index = 0; index < array.length; index++) {
-            int max = index;
-            for (int i = index; i < array.length; i++) {
-                if (array[i] > array[max]) {
-                    max = i;
-                }
-            }
-            int x = array[index];
-            array[index] = array[max];
-            array[max] = x;
-        }
-        for (int a : array) {
-            System.out.print(a + " ");
-        }
+        List<Integer> array = Arrays.asList(2, 3, 7, 38);
+        List<Integer> arraySorted = array.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+        arraySorted.forEach(System.out::println);
     }
 }

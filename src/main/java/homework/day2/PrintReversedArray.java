@@ -1,11 +1,13 @@
 package src.main.java.homework.day2;
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+
 public class PrintReversedArray {
 
-    public void printReversedArray(){
-        int[] array = {1,2,3,4,5};
-        for (int i = array.length - 1; i >= 0; i--) {
-            System.out.println(array[i]);
-        }
+    public void printReversedArray() {
+        List<Integer> array = Arrays.asList(2, 3, 7, 38);
+        array.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
     }
 }

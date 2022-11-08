@@ -1,18 +1,12 @@
 package src.main.java.homework.day2;
 
-import java.util.Random;
+import java.util.Arrays;
+import java.util.List;
 
 public class PrintArray {
 
     public void printArray() {
-        int[] array = new int[10];
-        Random random = new Random();
-
-        for (int i = 0; i < array.length; i++) {
-            array[i] = random.nextInt(100);
-        }
-        for (int a : array) {
-            System.out.print(a + " ");
-        }
+        List<Integer> array = Arrays.asList(2, 3, 7, 38);
+        array.forEach(s -> System.out.print(s + " "));
     }
 }

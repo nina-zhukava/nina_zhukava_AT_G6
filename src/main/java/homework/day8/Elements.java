@@ -1,6 +1,7 @@
 package src.main.java.homework.day8;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Elements {
@@ -12,30 +13,13 @@ public class Elements {
         elements.add("Check-box");
         elements.add("Drop-down");
         elements.add("Breadcrumb");
-
-        for (String s : elements) {
-            System.out.print(s + " ");
-        }
+        elements.forEach(s -> System.out.print(s + " "));
         System.out.println();
+        System.out.println(elements.stream().flatMap(s -> Arrays.stream(s.trim().split("[- ]"))).count());
 
-        int counter = 0;
-        for (String s : elements) {
-            String[] element = s.trim().split("[- ]");
-            if (element.length > 1) {
-                counter++;
-            }
-        }
-        System.out.println(counter);
-        for (int i = 0; i < elements.size(); i++) {
-            System.out.print(elements.get(i) + " ");
-        }
-        System.out.println();
         elements.add(4, "Spinner");
         elements.remove(2);
         elements.set(5, "Switch");
-
-        for (String s : elements) {
-            System.out.print(s + " ");
-        }
+        elements.forEach(s -> System.out.print(s + " "));
     }
 }

@@ -1,13 +1,12 @@
-package src.main.java.project.boxing;
+package src.main.java.project.vessel;
 
-import src.main.java.project.boxing.materials.Material;
-import src.main.java.project.boxing.materials.Metal;
-import src.main.java.project.content.Containable;
-import src.main.java.project.content.Transformable;
+import src.main.java.project.material.Metal;
+import src.main.java.project.material.OldMaterial;
+import src.main.java.project.stuff.Transformable;
 
 public class Can extends Vessel implements Containable {
 
-    public Can(double volume, double diameter, int weight, Material material) {
+    public Can(double volume, double diameter, int weight, OldMaterial material) {
         super(volume, diameter, weight, material);
     }
 
