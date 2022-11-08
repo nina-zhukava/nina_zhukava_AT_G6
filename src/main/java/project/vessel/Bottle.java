@@ -1,7 +1,6 @@
 package src.main.java.project.vessel;
 
-import src.main.java.project.material.Glass;
-import src.main.java.project.material.OldMaterial;
+import src.main.java.project.material.Material;
 import src.main.java.project.stuff.Bubble;
 import src.main.java.project.stuff.SparklingWater;
 import src.main.java.project.stuff.Transformable;
@@ -16,10 +15,10 @@ public class Bottle extends Vessel implements Containable {
     private Water water;
 
     public Bottle() {
-        super(1.0, 8.0, 1, new Glass());
+        super(1.0, 8.0, 1, Material.GLASS);
     }
 
-    public Bottle(double volume, double diameter, int weight, OldMaterial material) {
+    public Bottle(double volume, double diameter, int weight, Material material) {
         super(volume, diameter, weight, material);
         System.out.println("The bottle is filling in with bubbles");
         this.water = new SparklingWater();
