@@ -1,7 +1,7 @@
 package src.main.java.homework.day12;
 
 public class Mouse {
-    private String pattern;
+    private String pattern = "Mouse <n>";
     private String name;
 
     public String getPattern() {

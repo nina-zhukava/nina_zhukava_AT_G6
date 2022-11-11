@@ -3,16 +3,16 @@ package src.main.java.homework.day12;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class SevenThreads {
+public class SubTaskTwo {
 
     public static void main(String[] args) throws InterruptedException {
-        new Thread(SevenThreads::createMiceAndPeep).start();
-        new Thread(SevenThreads::createMiceAndPeep).start();
-        new Thread(SevenThreads::createMiceAndPeep).start();
-        new Thread(SevenThreads::createMiceAndPeep).start();
-        new Thread(SevenThreads::createMiceAndPeep).start();
-        new Thread(SevenThreads::createMiceAndPeep).start();
-        new Thread(SevenThreads::createMiceAndPeep).start();
+        new Thread(SubTaskTwo::createMiceAndPeep).start();
+        new Thread(SubTaskTwo::createMiceAndPeep).start();
+        new Thread(SubTaskTwo::createMiceAndPeep).start();
+        new Thread(SubTaskTwo::createMiceAndPeep).start();
+        new Thread(SubTaskTwo::createMiceAndPeep).start();
+        new Thread(SubTaskTwo::createMiceAndPeep).start();
+        new Thread(SubTaskTwo::createMiceAndPeep).start();
     }
 
     public static void createMiceAndPeep() {

@@ -3,14 +3,14 @@ package src.main.java.homework.day12;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class FiveThreads {
+public class SubtaskOne {
 
     public static void main(String[] args) throws InterruptedException {
-        new Thread(FiveThreads::createMiceAndPeep).start();
-        new Thread(FiveThreads::createMiceAndPeep).start();
-        new Thread(FiveThreads::createMiceAndPeep).start();
-        new Thread(FiveThreads::createMiceAndPeep).start();
-        new Thread(FiveThreads::createMiceAndPeep).start();
+        new Thread(SubtaskOne::createMiceAndPeep).start();
+        new Thread(SubtaskOne::createMiceAndPeep).start();
+        new Thread(SubtaskOne::createMiceAndPeep).start();
+        new Thread(SubtaskOne::createMiceAndPeep).start();
+        new Thread(SubtaskOne::createMiceAndPeep).start();
     }
 
     public static void createMiceAndPeep() {
