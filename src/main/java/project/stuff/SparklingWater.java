@@ -11,15 +11,20 @@ public class SparklingWater extends Water {
 
     //конструктор, который сетает нужное количество пузырьков из рассчета, что 1 литр воды
     // содержит 10 тыс пузырьков и вызывает внутренний метод isOpened()
-    public SparklingWater() {
-        this.bubbles = new ArrayList<>();//todo set
-        isOpened();
+    public SparklingWater(double vol) {
+        this.bubbles = new ArrayList<>((int) (vol * bubblesPerLitr));
+        pump(this.bubbles);
+        try {
+            isOpened();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     // публичный метод void pump(Bubble[] bubbles), который сетает массив из пузырьков в воду
-    public void pump(List<Bubble> bubbles) { //а где мы создаем пузырьки?
+    public void pump(List<Bubble> bubbles) {
         for (int i = 0; i < bubbles.size(); i++) {
-            bubbles.set(i, new Bubble(/*"CO2"*/));
+            bubbles.set(i, new Bubble());
         }
     }
 
@@ -27,12 +32,21 @@ public class SparklingWater extends Water {
     // и в случае, если она открыта запускает метод degas()
     private void isOpened() {
         System.out.println("Checking if water is opened");
-        if (isOpened) {
-            degas(this.bubbles);
-        }
+        new Thread(() -> {
+            if (isOpened) {
+                degas(this.bubbles);
+            } else {
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }).start();
     }
 
-    //приватный метод degas(), который каждую секунду выпускает по партии пузырьков из рассчета 10 + 5 * температура_воды
+    //приватный метод degas(), который каждую секунду выпускает по партии пузырьков из рассчета 10 + 5 *
+    // температура_воды
     private void degas(List<Bubble> bubbles) {
         System.out.println("Bubbles are leaving water");
         for (Bubble bubble : bubbles) {

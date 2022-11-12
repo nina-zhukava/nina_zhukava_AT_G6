@@ -1,42 +1,38 @@
 package src.main.java.project.warehouse;
 
+import src.main.java.project.vessel.Containable;
 import src.main.java.project.vessel.Vessel;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class VesselBox<T extends Vessel> {
-    private List<T> t;
 
-    public VesselBox(T o, int i) {
-        if (i == 9 || i == 25 || i == 36) {
-            this.t = new ArrayList<>(i);
-            for (int j = 0; j < i; j++) { //как заменить?
-                t.set(j, o);
-            }
-        } else {
-            System.out.println("Cannot create box with this capacity");
-        }
+    private String name; //имя ящика, по маске "I am box with <25> <Bottles>"
+    private int capacity;
+    private List<Containable> box;
+    private long id;
+
+    public VesselBox(String name, List<Containable> box) {
+        this.name = name;
+        this.box = box;
+        this.capacity = box.size();
     }
 
-    public List<T> getT() {
-        return t;
+    public String getName() {
+        return name;
     }
 
-    public int getSize() {
-        return t.size();
+    public int getCapacity() {
+        return capacity;
     }
 
-    public void setT(List<T> t) {
-        this.t = t;
+    public List<Containable> getBox() {
+        return box;
     }
 
-    @Override
-    public String toString() {
-        return "VesselBox{" +
-                "t=" + t +
-                '}';
+    public long getId() {
+        return id;
     }
 
     @Override
@@ -44,11 +40,21 @@ public class VesselBox<T extends Vessel> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         VesselBox<?> vesselBox = (VesselBox<?>) o;
-        return Objects.equals(t, vesselBox.t);
+        return capacity == vesselBox.capacity && id == vesselBox.id && Objects.equals(name, vesselBox.name) && Objects.equals(box, vesselBox.box);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(t);
+        return Objects.hash(name, capacity, box, id);
+    }
+
+    @Override
+    public String toString() {
+        return "VesselBox{" +
+                "name='" + name + '\'' +
+                ", capacity=" + capacity +
+                ", box=" + box +
+                ", id=" + id +
+                '}';
     }
 }
