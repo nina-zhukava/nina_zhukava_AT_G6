@@ -16,9 +16,6 @@ public abstract class Vessel {
         this.material = material;
     }
 
-    public Vessel() {
-    }
-
     public double getVolume() {
         return volume;
     }
