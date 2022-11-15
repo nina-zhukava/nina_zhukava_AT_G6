@@ -12,12 +12,12 @@ public class Bottle extends Vessel implements Containable {
     private Transformable stuff;
 
     public Bottle(double volume, Material material) {
-        super(volume, 8.0, material);
+        super(volume, 2.0, material);
     }
 
     public Bottle(double volume, double diameter, Material material) {
         super(volume, diameter, material);
-        System.out.println("The bottle is filling in with bubbles");
+        System.out.println("The bottle is filling in with bubbles"); //todo вынести куда?
         this.water = new SparklingWater(volume);
     }
 
@@ -51,21 +51,18 @@ public class Bottle extends Vessel implements Containable {
 
     @Override
     public Transformable removeStuff() {
-        return null;
+        Transformable stuff = this.stuff;
+        this.stuff = null;
+        return stuff;
     }
 
     @Override
-    public boolean isEmpty() {
+    public boolean isEmpty() { //todo у нас нет такого поля
         return false;
     }
 
-/*    @Override
-    public int getFreeSpace() {
-        return 0;
-    }*/
-
     @Override
     public void close() {
-
+        //todo сетается на воду?
     }
 }

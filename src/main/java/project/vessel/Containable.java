@@ -13,9 +13,6 @@ public interface Containable {
     // returns true if there is no stuff inside
     public boolean isEmpty();
 
-/*    //returns an integer value of free millilitres
-    public int getFreeSpace();*/
-
     //forces Containable to be opened
     public void open();
 

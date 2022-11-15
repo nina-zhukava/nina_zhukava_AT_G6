@@ -17,12 +17,14 @@ public class Cup extends Vessel implements Containable {
 
     @Override
     public void addStuff(Transformable stuff) {
-
+        this.stuff = stuff;
     }
 
     @Override
     public Transformable removeStuff() {
-        return null;
+        Transformable stuff = this.stuff;
+        this.stuff = null;
+        return stuff;
     }
 
     @Override
