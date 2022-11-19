@@ -1,4 +1,4 @@
-package project.warehouse;
+package src.main.java.project.warehouse;
 
 import project.vessel.Bottle;
 import project.vessel.Cup;
@@ -10,25 +10,14 @@ public class Warehouse {
     private Map<Integer, VesselBox> stock;
 
     public void addBox(VesselBox box) {
-
+        this.stock.put(stock.size() + 1, box);
     }
 
-    public VesselBox getBox() {
-
+    public VesselBox getBox(int index) {
+        return stock.get(index);
     }
 
-    void removeBox() {
-
-    }
-
-    public static void main(String[] args) {
-        // Создать 2 объекта класса VesselBox с бутылками и кружками в классе Warehouse
-        // и вывести на экран имена хранимых обьектов.
-        VesselBox<Bottle> bottleBox = new VesselBox<>(new Bottle(), 9);
-        VesselBox<Cup> cupBox = new VesselBox<>(new Cup(), 25);
-
-        bottleBox.getT().stream().peek(System.out::println);
-
-
+    void removeBox(int index) {
+        stock.remove(index);
     }
 }

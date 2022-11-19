@@ -3,7 +3,7 @@ package project.vessel;
 import project.material.Material;
 import project.stuff.Transformable;
 
-public class Cup extends Vessel implements Containable {
+public class Cup extends Vessel implements Container {
 
     private Transformable stuff;
 

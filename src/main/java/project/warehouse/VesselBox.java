@@ -1,18 +1,20 @@
-package project.warehouse;
+package src.main.java.project.warehouse;
 
+import src.main.java.project.vessel.Container;
+import src.main.java.project.vessel.Vessel;
 import project.vessel.Vessel;
 
 import java.util.List;
 import java.util.Objects;
 
-public class VesselBox<T extends Vessel> {
+public class VesselBox<T extends Vessel> { //cсоздаем коробку с бутылками/кружками/банками
 
     private String name; //имя ящика, по маске "I am box with <25> <Bottles>"
     private int capacity;
     private List<Containable> box;
     private long id;
 
-    public VesselBox(String name, List<Containable> box) {
+    public VesselBox(String name, List<Container> box) { //todo зачем нам тут имя передавать?
         this.name = name;
         this.box = box;
         this.capacity = box.size();
@@ -26,7 +28,7 @@ public class VesselBox<T extends Vessel> {
         return capacity;
     }
 
-    public List<Containable> getBox() {
+    public List<Container> getBox() {
         return box;
     }
 
