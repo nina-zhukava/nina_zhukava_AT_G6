@@ -2,7 +2,7 @@ package src.main.java.project.vessel;
 
 import src.main.java.project.stuff.Transformable;
 
-public interface Containable {
+public interface Container {
 
     // adds some stuff (e.g. water, sand) to Containable object
     public void addStuff(Transformable stuff);

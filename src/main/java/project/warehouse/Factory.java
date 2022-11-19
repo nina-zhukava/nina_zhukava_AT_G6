@@ -2,7 +2,7 @@ package src.main.java.project.warehouse;
 
 import src.main.java.project.material.Material;
 import src.main.java.project.stuff.Transformable;
-import src.main.java.project.vessel.Containable;
+import src.main.java.project.vessel.Container;
 
 public class Factory {
     private Warehouse warehouse;
@@ -11,7 +11,7 @@ public class Factory {
 //        VesselBox<type.getClass()> vesselBox = new VesselBox<>("", )
     }
 
-    private Containable createVessel(double volume, Material material, Transformable stuff, Class<?> type) {
+    private Container createVessel(double volume, Material material, Transformable stuff, Class<?> type) {
 //        Vessel vessel = new type;
         return null;
     }

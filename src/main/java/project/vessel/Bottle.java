@@ -5,7 +5,7 @@ import src.main.java.project.stuff.SparklingWater;
 import src.main.java.project.stuff.Transformable;
 import src.main.java.project.stuff.Water;
 
-public class Bottle extends Vessel implements Containable {
+public class Bottle extends Vessel implements Container {
 
     private double volume;
     private Water water;
@@ -21,8 +21,6 @@ public class Bottle extends Vessel implements Containable {
         this.water = new SparklingWater(volume);
     }
 
-    //есть публичный метод void open(), который меняет состояние воды в "открытое"(~ как this.water.setOpened(true);)
-    //который вызывает метод degas() в газировке (требование с первой домашки)
     public void open() {
         if (water instanceof SparklingWater) {
             System.out.println("Changes water state to Open");

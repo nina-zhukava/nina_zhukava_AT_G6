@@ -3,7 +3,7 @@ package src.main.java.project.vessel;
 import src.main.java.project.material.Material;
 import src.main.java.project.stuff.Transformable;
 
-public class Can extends Vessel implements Containable {
+public class Can extends Vessel implements Container {
 
     private Transformable stuff;
 
