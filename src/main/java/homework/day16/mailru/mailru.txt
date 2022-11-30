@@ -1,0 +1,28 @@
+https://mail.ru/
+
+0 //img[@src="https://r.mradx.net/img/DC/098D51.png"]
+  //div[@class="toolbar__content i-valign-middle"]//img[@width="319"]
+1 //span[contains(.,"Создать ящик")]
+  //span[@class="toolbar__btn toolbar__btn_primary i-valign-middle"]
+2 //a[@class="ph-project svelte-jq5qv5 ph-project_current"]
+  //div[@class="ph-projects svelte-a9o3e5"]/a[contains(.,"Mail.ru")]
+3 //div[@class="ph-projects svelte-a9o3e5"]/a[contains(.,"Облако")]
+  //div[@class="ph-projects svelte-a9o3e5"]/a[3]
+4 //div[@class="ph-auth svelte-1hiqrvn"]/a
+  //a[contains(.,"Регистрация")]
+5 //div[@class="ph-auth svelte-1hiqrvn"]/button
+  //div[@class="ph-auth svelte-1hiqrvn"]/button[contains(.,"Войти")]
+6 //button[@class="search-arrow__button"]
+  //button[contains(.,"Найти")]
+7 //a[@href="https://trk.mail.ru/c/veoz41"]
+  //div[@class="mailbox-services svelte-giypkm"]/a[1]
+8 //a[contains(.,"Леди")]
+  //a[@href="//lady.mail.ru/"]
+9 //ul[@data-testid="news-content"]/li[2]
+  //li[@data-testid="general-news-item-rb"][2]
+10 //button[@class="resplash-btn resplash-btn_primary resplash-btn_mailbox-big svelte-1y37831"]
+  //button[@data-testid="enter-mail-primary"]
+11 //a[@data-testid="mailbox-create-link"]
+  //a[contains(.,"Создать почту")]
+12 //a[contains(.,"Подробнее")]
+  //a[@class="weather__more svelte-xn9nd0"]
