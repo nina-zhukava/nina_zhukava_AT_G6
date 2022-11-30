@@ -14,7 +14,7 @@ public class VesselBox<T extends Vessel> { //cсоздаем коробку с �
     private List<Containable> box;
     private long id;
 
-    public VesselBox(String name, List<Container> box) { //todo зачем нам тут имя передавать?
+    public VesselBox(String name /*Bottles*/, List<Container> box) { //todo зачем нам тут имя передавать?
         this.name = name;
         this.box = box;
         this.capacity = box.size();

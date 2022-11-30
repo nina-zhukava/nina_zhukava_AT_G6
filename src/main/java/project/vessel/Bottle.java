@@ -16,7 +16,7 @@ public class Bottle extends Vessel implements Container {
         super(volume, 2.0, material);
     }
 
-    public Bottle(double volume, double diameter, Material material) {
+    public Bottle(double volume, double diameter, Material material) { //можно добавить воду,чтобы не создавать ее здесь
         super(volume, diameter, material);
         System.out.println("The bottle is filling in with bubbles"); //todo вынести куда?
         this.water = new SparklingWater(volume);
