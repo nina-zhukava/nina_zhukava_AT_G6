@@ -5,12 +5,14 @@ import project.stuff.Transformable;
 
 public class Can extends Vessel implements Containable {
 
-    public Can(double volume, double diameter, int weight, Material material) {
-        super(volume, diameter, weight, material);
+    private Transformable stuff;
+
+    public Can(double volume, double diameter, Material material) {
+        super(volume, diameter, material);
     }
 
-    public Can() {
-        super(0.4, 5, 1, Material.METAL);
+    public Can(double volume) {
+        super(volume, 5, Material.METAL);
     }
 
     @Override
@@ -28,10 +30,10 @@ public class Can extends Vessel implements Containable {
         return false;
     }
 
-    @Override
+/*    @Override
     public int getFreeSpace() {
         return 0;
-    }
+    }*/
 
     @Override
     public void open() {
@@ -40,6 +42,11 @@ public class Can extends Vessel implements Containable {
 
     @Override
     public void close() {
+
+    }
+
+    @Override
+    public void warm(int temperature) {
 
     }
 }

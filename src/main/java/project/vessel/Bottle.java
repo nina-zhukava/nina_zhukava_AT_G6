@@ -6,43 +6,29 @@ import project.stuff.SparklingWater;
 import project.stuff.Transformable;
 import project.stuff.Water;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Bottle extends Vessel implements Containable {
 
     private double volume;
     private Water water;
+    private Transformable stuff;
 
-    public Bottle() {
-        super(1.0, 8.0, 1, Material.GLASS);
+    public Bottle(double volume, Material material) {
+        super(volume, 8.0, material);
     }
 
-    public Bottle(double volume, double diameter, int weight, Material material) {
-        super(volume, diameter, weight, material);
+    public Bottle(double volume, double diameter, Material material) {
+        super(volume, diameter, material);
         System.out.println("The bottle is filling in with bubbles");
-        this.water = new SparklingWater();
-        List<Bubble> bubbles = new ArrayList<>((int) (volume * 10000));
-        ((SparklingWater) water).pump(bubbles);
-    }
-
-    //Bottle(double volume), в котором бутылка заполняется массивом из пузырьков из рассчета 10000 на каждый литр
-    //как сочетать с конструктором выше? добавила в вессел пустой конструктор пока
-    public Bottle(double vol) {
-        System.out.println("The bottle is filling in with bubbles");
-        this.volume = vol;
-        this.water = new SparklingWater();
-        List<Bubble> bubbles = new ArrayList<>((int) (volume * 10000));
-        ((SparklingWater) water).pump(bubbles);
+        this.water = new SparklingWater(volume);
     }
 
     //есть публичный метод void open(), который меняет состояние воды в "открытое"(~ как this.water.setOpened(true);)
     //который вызывает метод degas() в газировке (требование с первой домашки)
     public void open() {
-/*        if (water instanceof SparklingWater) {
+        if (water instanceof SparklingWater) {
             System.out.println("Changes water state to Open");
-            ((SparklingWater) water).setOpened(true);
-        }*/
+            water.setOpened();
+        }
     }
 
     // публичный метод void warm(int temperature), который устанавливает температуру воды в бутылке
@@ -61,7 +47,7 @@ public class Bottle extends Vessel implements Containable {
 
     @Override
     public void addStuff(Transformable stuff) {
-
+        this.stuff = stuff;
     }
 
     @Override
@@ -74,10 +60,10 @@ public class Bottle extends Vessel implements Containable {
         return false;
     }
 
-    @Override
+/*    @Override
     public int getFreeSpace() {
         return 0;
-    }
+    }*/
 
     @Override
     public void close() {
