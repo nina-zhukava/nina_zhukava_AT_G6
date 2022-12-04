@@ -1,4 +1,4 @@
-package src.main.java.project.material;
+package project.material;
 
 public enum Material {
     GLASS(0.017, "green", 2200),

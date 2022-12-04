@@ -1,4 +1,4 @@
-package src.main.java.homework.day2;
+package homework.day2;
 
 public class CycleWhile {
 

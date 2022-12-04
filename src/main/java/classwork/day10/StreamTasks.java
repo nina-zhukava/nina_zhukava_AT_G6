@@ -1,4 +1,4 @@
-package src.main.java.classwork.day10;
+package classwork.day10;
 
 import java.util.Arrays;
 import java.util.List;

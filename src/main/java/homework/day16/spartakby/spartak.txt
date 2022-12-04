@@ -1,0 +1,24 @@
+https://spartak.by/
+
+0 //img[@alt="логотип Спартак"]
+  //img[@title="Спартак"]
+1 //a[@href="/partners/"][@class="has_child"]
+  //li[@class='menu-dropdown-icon']//span[contains(.,'Информация для партнеров')]/parent::*
+2 //*[@class="top-h-row"]//*[@href="/products/Impresso/"]
+  //ul[@class="menu full"]//*//*//*[@href="/products/Impresso/"]
+3 //i[@class="search fa search-btn lupa"]
+  //ul[@class="nav navbar-nav navbar-border-bottom navbar-right list-unstyled hidden-xs hidden-sm"]/li/i
+4 //span[@class="header__eye"]
+  //span[contains(@class,"header__eye")]
+5 //a[@class="header__lang__item header__lang__item_ru active"]
+  //div[@class="header__lang"]//a[contains(.,"Ru")]
+6 //a[@class="header__lang__item header__lang__item_eng"][@href="/cn/"]
+  //div[@class="header__lang"]//a[contains(.,"Ch")]
+7 //a[@class="download-catalog"]
+  //a[contains(.,'Скачать каталог')]
+8 //ol[@class="flex-control-nav flex-control-paging"]//*//a[contains(.,'2')]
+  //ol[@class="flex-control-nav flex-control-paging"]//li[2]//a
+9 //div[@class="top_slider_wrapp"]//ul[@class="social_list"]//li[1]
+  //header//ul[@class="social_list"]//*//a[@href="https://vk.com/spartakby"]
+10 //div[@class="top_slider_wrapp"]//ul[@class="social_list"]//li[5]
+  //div[@class="top_slider_wrapp"]//ul[@class="social_list"]//*[contains(@href,"https://www.youtube.com/channel/UC2xYusMBxs4XkwoPotvTw4A")]

@@ -1,7 +1,6 @@
-package src.main.java.project.warehouse;
+package project.warehouse;
 
-import src.main.java.project.vessel.Containable;
-import src.main.java.project.vessel.Vessel;
+import project.vessel.Vessel;
 
 import java.util.List;
 import java.util.Objects;

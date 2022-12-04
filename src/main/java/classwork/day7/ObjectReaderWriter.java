@@ -1,4 +1,4 @@
-package src.main.java.classwork.day7;
+package classwork.day7;
 
 import java.io.*;
 

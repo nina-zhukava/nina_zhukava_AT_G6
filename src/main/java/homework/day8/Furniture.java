@@ -1,6 +1,6 @@
-package src.main.java.homework.day8;
+package homework.day8;
 
-import src.main.java.homework.day8.zeroTask.Chair;
+import homework.day8.zeroTask.Chair;
 
 import java.util.*;
 

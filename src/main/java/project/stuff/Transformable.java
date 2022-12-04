@@ -1,4 +1,4 @@
-package src.main.java.project.stuff;
+package project.stuff;
 
 public interface Transformable {
 

@@ -1,4 +1,4 @@
-package src.main.java.homework.day6.strings;
+package homework.day6.strings;
 
 
 public class StringStaticRunner {

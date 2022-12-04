@@ -1,7 +1,7 @@
-package src.main.java.project.warehouse;
+package project.warehouse;
 
-import src.main.java.project.vessel.Bottle;
-import src.main.java.project.vessel.Cup;
+import project.vessel.Bottle;
+import project.vessel.Cup;
 
 import java.util.Map;
 

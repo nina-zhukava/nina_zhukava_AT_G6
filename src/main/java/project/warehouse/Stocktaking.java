@@ -1,4 +1,4 @@
-package src.main.java.project.warehouse;
+package project.warehouse;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

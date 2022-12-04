@@ -1,4 +1,4 @@
-package src.main.java.project.warehouse;
+package project.warehouse;
 
 import src.main.java.project.material.Material;
 import src.main.java.project.stuff.Transformable;

@@ -1,4 +1,4 @@
-package src.main.java.homework.day8.zeroTask;
+package homework.day8.zeroTask;
 
 import java.util.Objects;
 

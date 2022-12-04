@@ -1,4 +1,4 @@
-package src.main.java.homework.day4;
+package homework.day4;
 
 import java.time.LocalDateTime;
 import java.util.Comparator;
