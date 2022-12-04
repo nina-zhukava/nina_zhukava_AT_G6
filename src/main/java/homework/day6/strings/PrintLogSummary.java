@@ -1,4 +1,4 @@
-package src.main.java.homework.day6.strings;
+package homework.day6.strings;
 
 public class PrintLogSummary {
     //    1.4 имеется текстовый лог в виде (ниже общий вид, т.е. частный случай):

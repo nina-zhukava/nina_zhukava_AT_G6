@@ -1,4 +1,4 @@
-package src.main.java.homework.day8.small;
+package homework.day8.small;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

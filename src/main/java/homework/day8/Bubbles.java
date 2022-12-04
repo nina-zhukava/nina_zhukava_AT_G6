@@ -1,6 +1,6 @@
-package src.main.java.homework.day8;
+package homework.day8;
 
-import src.main.java.homework.day8.zeroTask.Bubble;
+import homework.day8.zeroTask.Bubble;
 
 import java.util.ArrayList;
 import java.util.Arrays;

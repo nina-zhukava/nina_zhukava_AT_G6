@@ -1,4 +1,4 @@
-package src.main.java.classwork.day12;
+package classwork.day12;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

@@ -1,4 +1,4 @@
-package src.main.java.homework.day12;
+package homework.day12;
 
 public class Hedgehog {
     private String pattern = "Hedgehog <n>";

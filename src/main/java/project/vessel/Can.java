@@ -1,7 +1,7 @@
-package src.main.java.project.vessel;
+package project.vessel;
 
-import src.main.java.project.material.Material;
-import src.main.java.project.stuff.Transformable;
+import project.material.Material;
+import project.stuff.Transformable;
 
 public class Can extends Vessel implements Containable {
 

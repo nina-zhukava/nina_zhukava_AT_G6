@@ -1,4 +1,4 @@
-package src.main.java.classwork.day11;
+package classwork.day11;
 
 public class Thr2 {
     public static void main(String[] args) throws InterruptedException {

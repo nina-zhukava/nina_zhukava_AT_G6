@@ -1,4 +1,4 @@
-package src.main.java.classwork.day8;
+package classwork.day8;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

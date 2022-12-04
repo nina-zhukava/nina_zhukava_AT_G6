@@ -1,10 +1,10 @@
-package src.main.java.project.vessel;
+package project.vessel;
 
-import src.main.java.project.material.Material;
-import src.main.java.project.stuff.Bubble;
-import src.main.java.project.stuff.SparklingWater;
-import src.main.java.project.stuff.Transformable;
-import src.main.java.project.stuff.Water;
+import project.material.Material;
+import project.stuff.Bubble;
+import project.stuff.SparklingWater;
+import project.stuff.Transformable;
+import project.stuff.Water;
 
 import java.util.ArrayList;
 import java.util.List;

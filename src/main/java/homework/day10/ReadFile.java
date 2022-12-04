@@ -1,4 +1,4 @@
-package src.main.java.homework.day10;
+package homework.day10;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

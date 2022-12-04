@@ -1,6 +1,6 @@
-package src.main.java.project.warehouse;
+package project.warehouse;
 
-import src.main.java.project.vessel.Vessel;
+import project.vessel.Vessel;
 
 import java.util.ArrayList;
 import java.util.List;

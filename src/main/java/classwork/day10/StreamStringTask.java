@@ -1,6 +1,6 @@
-package src.main.java.classwork.day10;
+package classwork.day10;
 
-import src.main.java.classwork.day9.Person;
+import classwork.day9.Person;
 
 import java.util.Arrays;
 import java.util.Comparator;

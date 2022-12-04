@@ -1,4 +1,4 @@
-package src.main.java.classwork.day6;
+package classwork.day6;
 
 public class ObjectContainer {
     private Object[] array = new Object[10];

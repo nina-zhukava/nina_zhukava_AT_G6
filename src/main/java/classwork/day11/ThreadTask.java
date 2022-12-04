@@ -1,4 +1,4 @@
-package src.main.java.classwork.day11;
+package classwork.day11;
 
 import static java.lang.Math.atan;
 import static java.lang.Math.tan;
