@@ -1,8 +1,8 @@
 package project.warehouse;
 
-import src.main.java.project.material.Material;
-import src.main.java.project.stuff.Transformable;
-import src.main.java.project.vessel.Container;
+import project.material.Material;
+import project.stuff.Transformable;
+import project.vessel.Container;
 
 public class Factory {
     private Warehouse warehouse;
