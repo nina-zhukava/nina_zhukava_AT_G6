@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="nina_zhukava_AT_G6_1" />
+        <module name="nina_zhukava_AT_G6" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

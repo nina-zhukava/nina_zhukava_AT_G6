@@ -19,10 +19,12 @@ public class BookingMilanCssTest {
         WebDriver driver = new ChromeDriver();
         driver.get("http://booking.com");
         driver.findElement(By.id("onetrust-accept-btn-handler")).click();
+
         WebElement where = driver.findElement(By.cssSelector("input[placeholder='Where are you going?']"));
         where.click();
-        where.sendKeys("milan");
+        where.sendKeys("Milano");
         Thread.sleep(2000);
+
         driver.findElement(By.cssSelector("li[role=option]:nth-child(1), ul[data-testid='autocomplete-results']>li:nth-child(1)")).click();
         LocalDate date = LocalDate.now().plusDays(1);
         date.format(DateTimeFormatter.ofPattern("d MMMM yyyy"));
