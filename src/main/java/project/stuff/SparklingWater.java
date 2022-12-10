@@ -9,8 +9,6 @@ public class SparklingWater extends Water {
     private List<Bubble> bubbles;
     private int bubblesPerLitr = 10000;
 
-    //конструктор, который сетает нужное количество пузырьков из рассчета, что 1 литр воды
-    // содержит 10 тыс пузырьков и вызывает внутренний метод isOpened()
     public SparklingWater(double vol) {
         this.bubbles = new ArrayList<>((int) (vol * bubblesPerLitr));
         pump(this.bubbles);
@@ -35,12 +33,6 @@ public class SparklingWater extends Water {
         new Thread(() -> {
             if (isOpened) {
                 degas(this.bubbles);
-            } else {
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
             }
         }).start();
     }
@@ -49,9 +41,17 @@ public class SparklingWater extends Water {
     // температура_воды
     private void degas(List<Bubble> bubbles) {
         System.out.println("Bubbles are leaving water");
-        for (Bubble bubble : bubbles) {
-            bubble.cramp();
-            bubbles.remove(bubble);
+        int bubblesPerSecond = 10 + 5 * getTemperature();
+        while (bubbles.size() != 0) {
+            for (int i = 0; i < bubblesPerSecond; i++) {
+                bubbles.get(i).cramp();
+                bubbles.remove(bubbles.get(i));
+            }
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 

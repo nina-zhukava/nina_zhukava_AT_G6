@@ -2,7 +2,7 @@ package project.vessel;
 
 import project.stuff.Transformable;
 
-public interface Containable {
+public interface Container {
 
     // adds some stuff (e.g. water, sand) to Containable object
     public void addStuff(Transformable stuff);
@@ -12,9 +12,6 @@ public interface Containable {
 
     // returns true if there is no stuff inside
     public boolean isEmpty();
-
-/*    //returns an integer value of free millilitres
-    public int getFreeSpace();*/
 
     //forces Containable to be opened
     public void open();
