@@ -12,7 +12,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertTrue;
 
-public class BookingMilanTest {
+public class BookingMilanXpathTest {
 
     @Test
     public void BookingMilanTest() throws InterruptedException {
@@ -25,11 +25,11 @@ public class BookingMilanTest {
         Thread.sleep(2000);
         driver.findElement(By.xpath("//*[@data-testid='autocomplete-results' or @aria-label='List of suggested destinations' or @role='listbox']/li[1]")).click();
         LocalDate date = LocalDate.now().plusDays(1);
-        date.format(DateTimeFormatter.ofPattern("d MMMM YYYY"));
-        String startDateXPath = "//span[@aria-label='" + date.format(DateTimeFormatter.ofPattern("d MMMM YYYY")) +
+        date.format(DateTimeFormatter.ofPattern("d MMMM yyyy"));
+        String startDateXPath = "//span[@aria-label='" + date.format(DateTimeFormatter.ofPattern("d MMMM yyyy")) +
                 "']";
         String endDateXPath = "//span[@aria-label='" + date.plusDays(10).format(DateTimeFormatter.ofPattern("d MMMM " +
-                "YYYY")) + "']";
+                "yyyy")) + "']";
         Thread.sleep(1000);
         driver.findElement(By.xpath(startDateXPath)).click();
         Thread.sleep(1000);
